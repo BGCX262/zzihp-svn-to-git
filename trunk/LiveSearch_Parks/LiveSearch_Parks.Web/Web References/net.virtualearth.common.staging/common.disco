@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://staging.common.virtualearth.net/find-30/common.asmx?wsdl" docRef="http://staging.common.virtualearth.net/find-30/common.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://staging.common.virtualearth.net/find-30/common.asmx" xmlns:q1="http://s.mappoint.net/mappoint-30/" binding="q1:CommonServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

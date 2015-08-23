@@ -1,0 +1,31 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="MSNSearchPortBinding" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IImageryService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISearchService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://soap.search.live.com:80/webservices.asmx"
+                binding="basicHttpBinding" bindingConfiguration="MSNSearchPortBinding"
+                contract="MSN_SearchLiveService.MSNSearchPortType" name="MSNSearchPort" />
+            <endpoint address="http://staging.dev.virtualearth.net/webservices/v1/imageryservice/imageryservice.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IImageryService"
+                contract="ImageryService.IImageryService" name="BasicHttpBinding_IImageryService" />
+            <endpoint address="http://staging.dev.virtualearth.net/webservices/v1/searchservice/searchservice.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISearchService"
+                contract="VirtualEarthSearchService.ISearchService" name="BasicHttpBinding_ISearchService" />
+        </client>
+    </system.serviceModel>
+</configuration>
